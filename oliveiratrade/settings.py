@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y5#m6)0znc#!gftu*qq=3nrf5r)mr4gxjw@e*%1g1w#v^f(i6@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','oliveiratrade.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'oliveiratrade.onrender.com']
 
 
 # Application definition
