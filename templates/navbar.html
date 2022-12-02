@@ -1,0 +1,36 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<nav class="w-full flex justify-between items-center py-3 px-4 fixed z-50" id="navbar">
+    <div class="w-1/12">
+        <a href="/">
+            <img class="w-4/12" src="{% static 'images/trade_logo.png' %}">
+        </a>
+    </div>
+    <div class="w6/12 flex flex-nowrap justify-end">
+        <div class="mr-2">
+            {% if user.is_authenticated %}
+            <a href="{% url 'cadastro:logout' %}">
+                <button class="bg-blue-600 text-white py-1 px-3 rounded-md">
+                    Sair
+                </button>
+            </a>
+            {% else %}
+            <a href="{% url 'cadastro:login' %}">
+                <button class="bg-blue-600 text-white py-1 px-3 rounded-md">
+                    Login
+                </button>
+            </a>
+            {% endif %}
+        </div>
+        {% if user.is_authenticated %}
+        <div class="mr-2">
+            <a href="{% url 'cadastro:editarperfil' user.id %}">
+                <button class="bg-blue-600 text-white py-1 px-3 rounded-md">
+                    Editar Perfil
+                </button>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+</nav>

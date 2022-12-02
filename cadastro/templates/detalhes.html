@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Detalhes - OT
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content%}
+    <header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600 border-b-8 flex
+    justify-center items-center bg-cover bg-no-repeat" style="background-image: url('{% static 'images/trade.jpg' %}');">
+        <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+            {% include 'messages.html' %}
+            <h1 class="font-semibold text-4xl md:text-5xl w-12/12 md:w-4/4 text-center">
+                Olá {{ user.first_name }},<br>
+                Seja bem-vindo!
+            </h1>
+        </div>
+    </header>
+    <footer class=" px-5 py-10 ">
+        <ul class="flex justify-between items-center">
+            <li>&copy; 2022</li>
+            <li> Feito com Python (Django)</li>
+            <li>WiversonNogueira</li>
+        </ul>
+    </footer>
+{% endblock %}

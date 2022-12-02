@@ -1,0 +1,11 @@
+<!--NOTIFICAÇÃO DE ALTERACAO/CADASTRO-->
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            <ion-icon name="close-circle-outline"</ion-icon>
+        </button>
+    </div>
+    {% endfor %}
+{% endif %}

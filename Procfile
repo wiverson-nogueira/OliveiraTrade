@@ -1,0 +1,1 @@
+web: gunicorn oliveiratrade.wsgi --log-file -
