@@ -85,6 +85,17 @@ DATABASES = {
     }
 }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'oliveiratrade', 
+        'USER': 'oliveiratrade_user',
+        'PASSWORD': 'KntzU78o8E7wZWWovhK632T6T1gpekob',
+        'HOST': 'dpg-ce58b3sgqg49417qg02g-a', 
+        'PORT': '5432',
+    }
+}
+
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
